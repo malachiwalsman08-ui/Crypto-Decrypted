@@ -1,0 +1,166 @@
+:root {
+    --bg: #0f1724;
+    --text: #e6eef6;
+    --accent: #FFD24C;
+}
+
+body {
+    font-family: 'Anurati', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    color: var(--text);
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+/* Navigation: .page is applied to the list item; style the link inside it */
+.page {
+    color: var(--accent);
+    font-weight: bold;
+}
+.page a {
+    color: inherit;
+    font-weight: inherit;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.page a:hover,
+.page a:focus-visible {
+    text-decoration: underline;
+}
+
+.hpheader {
+text-align: left;
+}
+
+.icon {
+    margin-left: 70%;
+}
+/* A–Z index */
+.az-index ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .5rem; }
+.az-index a { color: var(--accent); text-decoration: none; padding: .2rem .4rem; border-radius: 4px; background: rgba(255,255,255,0.02); }
+.az-index a:hover { text-decoration: underline; }
+
+/* Two-column glossary layout */
+.terms.two-column { column-count: 2; column-gap: 2rem; }
+.terms h3 { break-inside: avoid-column; margin-top: 1rem; }
+.terms p { margin: 0.25rem 0 1rem 0; }
+
+/* Glossary term card styles */
+.term { background: rgba(255,255,255,0.02); border-radius: 8px; padding: 0.75rem; margin: 0 0 0.75rem 0; }
+.term-title { color: var(--accent); margin: 0 0 0.25rem 0; font-size: 1.02rem; }
+.term-body p { margin: 0; color: var(--text); opacity: 0.95; }
+
+/* Search input */
+.vocab-hero { display:flex; justify-content:space-between; align-items:center; gap:1rem; margin-bottom:1rem; }
+.vocab-search input[type="search"] { width: 320px; max-width: 40vw; padding: .6rem .8rem; border-radius: 8px; border: none; background: rgba(255,255,255,0.03); color: var(--text); }
+.vocab-search input::placeholder { color: rgba(230,238,246,0.6); }
+.visually-hidden { position: absolute !important; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px); white-space: nowrap; }
+
+/* Social icon row on contact page */
+.socials { display:flex; gap: 0.75rem; align-items:center; margin-top: 0.5rem; }
+.social { display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px; border-radius:8px; background: rgba(255,255,255,0.02); color: var(--text); text-decoration:none; }
+.social-icon { width:20px; height:20px; display:block; }
+.social:focus-visible, .social:hover { outline: none; box-shadow: 0 0 0 3px rgba(255,210,76,0.12); color: var(--accent); }
+.social .visually-hidden { position: absolute; }
+
+/* Top navigation: evenly spaced across the page */
+.top-nav { display:flex; justify-content: space-between; align-items:center; padding: 0 2rem; margin: 0; list-style:none; }
+.top-nav li { flex: 1 1 auto; text-align: center; }
+.top-nav li:first-child { text-align: left; }
+.top-nav li:last-child { text-align: right; }
+.top-nav a { display: inline-block; padding: .6rem .4rem; }
+
+/* highlight current nav link */
+.top-nav a[aria-current="page"] {
+  color: var(--bg);                 /* text on accent background */
+  background: var(--accent);        /* accent background */
+  border-radius: 6px;
+  padding: .5rem .75rem;
+  font-weight: 700;
+}
+
+/* optional: ensure keyboard focus remains visible */
+.top-nav a:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.12);
+  outline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+    .top-nav { flex-wrap: wrap; padding: 0 1rem; }
+    .top-nav li { text-align: center; width: 100%; }
+}
+
+.copy {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--accent);
+}
+
+h3 {
+color: var(--accent);
+}
+
+/* Print rules for PDF export */
+@media print {
+  body { background: #fff; color: #000; }
+  .az-index { display: block; margin-bottom: 1rem; }
+  .terms.two-column { column-count: 2; column-gap: 1.5rem; }
+  header, nav, .page, .az-index { color: #000; }
+}
+
+/* Icon row */
+.icon-row { display:flex; gap:1rem; align-items:center; padding:1rem 0; }
+.icon-row img { background: #0f1724; border-radius:8px; padding:8px; }
+
+/* Layout containers */
+.container { max-width: 1100px; margin: 0 auto; padding: 1rem; }
+
+/* Hero */
+.hero { display:flex; align-items:center; gap:2rem; padding: 3rem 1rem; }
+.hero-content { flex: 1 1 60%; }
+.hero-art { flex: 1 1 40%; text-align: center; }
+.lead { color: var(--text); opacity: 0.9; font-size: 1.1rem; }
+
+/* Buttons */
+.btn { display:inline-block; border-radius:8px; padding: .6rem 1rem; text-decoration:none; font-weight:600; }
+.btn-primary { background: var(--accent); color: var(--bg); }
+.btn-ghost { background: transparent; color: var(--text); border: 1px solid rgba(255,255,255,0.06); }
+
+/* Features */
+.features { padding: 2rem 1rem; }
+.feature-row { display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.25rem; margin-top: 1rem; }
+.feature { background: rgba(255,255,255,0.02); padding: 1rem; border-radius: 10px; text-align: center; }
+.feature h3 { margin-top: .5rem; margin-bottom: .5rem; }
+
+/* Contact page grid */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; align-items: start; }
+.contact-card { background: rgba(255,255,255,0.03); padding: 1.25rem; border-radius: 10px; }
+.contact-card h2 { margin-top: 0; color: var(--accent); }
+.muted { color: rgba(230,238,246,0.7); font-size: 0.95rem; }
+
+.contact-form { background: rgba(255,255,255,0.02); padding: 1rem; border-radius: 10px; display:flex; flex-direction:column; gap: .6rem; }
+.contact-form label { font-weight:600; font-size: .95rem; }
+.contact-form input, .contact-form textarea { padding: .6rem .75rem; border-radius: 8px; border: none; background: rgba(255,255,255,0.03); color: var(--text); }
+.contact-form .small { font-size: 0.85rem; color: rgba(230,238,246,0.7); }
+
+@media (max-width: 800px) {
+    .vocab-hero { flex-direction: column; align-items: stretch; }
+    .vocab-search input { width: 100%; max-width: 100%; }
+    .contact-grid { grid-template-columns: 1fr; }
+}
+
+/* Footer */
+.site-footer { padding: 2rem 1rem; text-align:center; }
+
+@media (max-width: 800px) {
+    .hero { flex-direction: column-reverse; text-align: center; }
+    .hero-art { margin-bottom: 1rem; }
+}

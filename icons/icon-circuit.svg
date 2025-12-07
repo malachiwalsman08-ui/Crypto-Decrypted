@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-label="circuit icon">
+  <rect width="100%" height="100%" rx="32" fill="#0f1724"/>
+  <g transform="translate(32,32)" stroke="#FFD24C" stroke-width="6" fill="none">
+    <path d="M32 64 H64 V32 H96" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="32" cy="32" r="8" fill="#FFD24C" stroke="none"/>
+    <circle cx="96" cy="96" r="8" fill="#FFD24C" stroke="none"/>
+    <circle cx="64" cy="160" r="8" fill="#FFD24C" stroke="none"/>
+    <path d="M96 96 H128 V160" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="128" y="216" font-size="14" text-anchor="middle" fill="#e6eef6" font-family="Arial">crypto</text>
+</svg>

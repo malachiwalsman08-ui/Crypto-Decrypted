@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" role="img" aria-hidden="true">
+  <title>Email</title>
+  <!-- White rounded background -->
+  <rect x="1" y="1" width="22" height="22" rx="4" fill="#FFFFFF" />
+  <!-- Black envelope -->
+  <g fill="none" stroke="#000000" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="4" y="6" width="16" height="12" rx="2" />
+    <path d="M5 8l7 5 7-5" stroke="#000000" />
+  </g>
+</svg>
