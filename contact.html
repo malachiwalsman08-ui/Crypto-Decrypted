@@ -50,7 +50,13 @@
                                 </div>
             </div>
 
-            <form class="contact-form" action="https://formspree.io/f/your_form_id" method="POST">
+            <!-- Using FormSubmit so messages go directly to your email address (first submission requires email verification) -->
+            <form class="contact-form" action="https://formsubmit.co/malachiwalsman08@gmail.com" method="POST">
+                <!-- hidden inputs accepted by FormSubmit to control behavior -->
+                <input type="hidden" name="_subject" value="New message from Crypto-Decrypted contact form">
+                <input type="hidden" name="_captcha" value="false">
+                <!-- optional: redirect users to a thank-you page after submit (set URL if you add one) -->
+                <!-- <input type="hidden" name="_next" value="https://malachiwalsman08-ui.github.io/Crypto-Decrypted/contact.html?thanks=1"> -->
                 <h2>Send a message</h2>
                 <label for="name">Name</label>
                 <input id="name" name="name" type="text" required>
